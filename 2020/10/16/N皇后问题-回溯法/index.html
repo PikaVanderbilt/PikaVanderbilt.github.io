@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo教程：（三）使用Hexo写博客, The Kingdom of Vanderbilt">
+    <meta name="keywords" content="N皇后问题 回溯法, The Kingdom of Vanderbilt">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo教程：（三）使用Hexo写博客 | The Kingdom of Vanderbilt</title>
+    <title>N皇后问题 回溯法 | The Kingdom of Vanderbilt</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo教程：（三）使用Hexo写博客</h1>
+                    <h1 class="description center-align post-title">N皇后问题 回溯法</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/tech/">
-                                <span class="chip bg-color">tech</span>
+                            <a href="/tags/algorithm/">
+                                <span class="chip bg-color">algorithm</span>
                             </a>
                         
                     </div>
@@ -469,14 +469,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h4><p>尽管 Hexo 支持 MarkDown，但是我们却不能像写单独的 MarkDown 文档时那样肆无忌惮。由于我们所写的文档是需要被解析为静态网页文件的，所以我们必须严格遵从 Hexo 的规范，这样才能解析出条理清晰的静态网页文件。</p>
-<h4 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h4><p>这些内容是干嘛的呢？事实上，他们就是用于设置 MarkDown 文档在被解析为静态网页文件时的相关配置，这些配置参数一般位于文件中最上方以 <code>---</code> 分隔的区域。</p>
-<p>其中，<code>title</code> 的值是当前文档名，也是将来在网页中显示的文章标题。</p>
-<p><code>date</code> 值是我们新建文档时的当地时区时间。</p>
-<p><code>tags</code> 值是文档的标签，我们可以随意赋值为文档贴标签。其用法如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">closeJDBC</span><span class="params">(ResultSet rs, Statement stmt, Connection conn)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (rs != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                rs.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (stmt != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                stmt.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (conn != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                conn.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+                <h1 id="N皇后问题-回溯法"><a href="#N皇后问题-回溯法" class="headerlink" title="N皇后问题  回溯法"></a><strong>N皇后问题  回溯法</strong></h1><h2 id="1-算法描述"><a href="#1-算法描述" class="headerlink" title="1.算法描述"></a>1.算法描述</h2><p>在n×n格的国际象棋上摆放n个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。</p>
+<p>n皇后是由八皇后问题演变而来的。该问题是国际西洋棋棋手马克斯·贝瑟尔于1848年提出：在8×8格的国际象棋上摆放八个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。 高斯认为有76种方案。1854年在柏林的象棋杂志上不同的作者发表了40种不同的解，后来有人用图论的方法解出92种结果。</p>
+<h2 id="2-算法分析"><a href="#2-算法分析" class="headerlink" title="2.算法分析"></a>2.算法分析</h2><p>随着计算机的普及和发展，以前人们无法解决的问题，计算机可以简单计算出来。而且思路十分清晰，那就是暴力求解，遍历所有情况，然后计算出解的个数。</p>
+<h3 id="2-1-回溯法"><a href="#2-1-回溯法" class="headerlink" title="2.1 回溯法"></a>2.1 回溯法</h3><p>按选优条件向前搜索，以达到目标。但当探索到某一步时，发现原先选择并不优或达不到目标，就退回一步重新选择，这种走不通就退回再走的技术为回溯法</p>
+<h3 id="2-2-回溯法思路"><a href="#2-2-回溯法思路" class="headerlink" title="2.2 回溯法思路"></a>2.2 回溯法思路</h3><p>用数组模拟棋盘，从第一行开始，依次选择位置， 如果当前位置满足条件，则向下选位置， 如果不满足条件，那么当前位置后移一位。</p>
+<h3 id="2-3-n皇后回溯求解"><a href="#2-3-n皇后回溯求解" class="headerlink" title="2.3 n皇后回溯求解"></a>2.3 n皇后回溯求解</h3><p>因为八皇后不能在同行，同列， 同斜线。</p>
+<ol>
+<li><p>每一行放一个皇后，就解决了不在同行的问题。</p>
+</li>
+<li><p>在第i行的时候，遍历n列，试探位置。和之前所有行放的位置进行比较。</p>
+</li>
+<li><p>比较列：当前列col 不等于 之前 所有列。 即col != arr[i].</p>
+</li>
+<li><p>比较斜线， 因为不再同一斜率为1或者-1的斜线。(row - i) / (col - arr[i]) != 1 或 -1<br>可以取巧用绝对值函数: abs(row-i) != abs(col-arr[i])</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NQueen</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">long</span> count;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] arr;</span><br><span class="line"><span class="comment">//    private int nn;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NQueen</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.n = n;</span><br><span class="line">  <span class="comment">//      nn = (1 &lt;&lt; n) - 1;</span></span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        arr = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * row col   i  arr[i]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> row</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> col</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">Check</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(col == arr[i] || Math.abs(row - i) == Math.abs(col - arr[i])) <span class="comment">//在同一列或者在同一斜线。一定不在同一行</span></span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">FindNQueen</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (k == n) &#123;   <span class="comment">//求出一种解， count+1</span></span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (Check(k, i)) &#123;   <span class="comment">//检查是否满足条件</span></span><br><span class="line">                arr[k] = i;      <span class="comment">//记录</span></span><br><span class="line">                FindNQueen(k + <span class="number">1</span>);   <span class="comment">//递归查找</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        NQueen nQueen = <span class="keyword">new</span> NQueen(<span class="number">13</span>);</span><br><span class="line">        nQueen.FindNQueen(<span class="number">0</span>);</span><br><span class="line">        System.out.println(nQueen.count);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h4 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h4><p><img src="a.jpg"></p>
+
+
+</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *solution;		<span class="comment">//存储皇后的一组解</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">queen</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//递归出口   </span></span><br><span class="line">	<span class="keyword">if</span>(n == N)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>;k &lt; N;k++)</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;solution[k]; </span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> ; </span><br><span class="line">&#125;       </span><br><span class="line"><span class="comment">//假设n-1个皇后已经摆好，现在主备摆第n个皇后</span></span><br><span class="line"><span class="comment">//意味着solution[0]---solution[n-1]已经都有值了</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=N;i++)&#123;</span><br><span class="line">	<span class="keyword">int</span> k;</span><br><span class="line">	<span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;n;k++)</span><br><span class="line">		<span class="keyword">if</span>((solution[k] == i)||							<span class="comment">//发现同列，跳出</span></span><br><span class="line">		<span class="built_in">abs</span>(solution[k] - i) == <span class="built_in">abs</span>( n - k))					<span class="comment">//发现对角线。跳出</span></span><br><span class="line">		<span class="keyword">break</span>;													<span class="comment">//跳出当前循环 </span></span><br><span class="line">	<span class="keyword">if</span>(k == n)&#123;</span><br><span class="line">		solution[n] = i;</span><br><span class="line">		queen(n+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;N;</span><br><span class="line">	solution = <span class="keyword">new</span> <span class="keyword">int</span> [N];</span><br><span class="line">	queen(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">delete</span> [] solution;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
             </div>
             <hr/>
@@ -502,7 +516,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/10/16/Hexo%E6%95%99%E7%A8%8B%EF%BC%9A%EF%BC%88%E4%B8%89%EF%BC%89%E4%BD%BF%E7%94%A8Hexo%E5%86%99%E5%8D%9A%E5%AE%A2/">http://example.com/2020/10/16/Hexo%E6%95%99%E7%A8%8B%EF%BC%9A%EF%BC%88%E4%B8%89%EF%BC%89%E4%BD%BF%E7%94%A8Hexo%E5%86%99%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="http://example.com/2020/10/16/N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98-%E5%9B%9E%E6%BA%AF%E6%B3%95/">http://example.com/2020/10/16/N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98-%E5%9B%9E%E6%BA%AF%E6%B3%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,8 +554,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/tech/">
-                                    <span class="chip bg-color">tech</span>
+                                <a href="/tags/algorithm/">
+                                    <span class="chip bg-color">algorithm</span>
                                 </a>
                             
                         </div>
@@ -583,9 +597,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/10/16/N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98-%E5%9B%9E%E6%BA%AF%E6%B3%95/">
                     <div class="card-image">
@@ -603,9 +618,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -614,6 +629,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -632,13 +648,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/28/hello-world/">
+                <a href="/2020/10/16/Hexo%E6%95%99%E7%A8%8B%EF%BC%9A%EF%BC%88%E4%B8%89%EF%BC%89%E4%BD%BF%E7%94%A8Hexo%E5%86%99%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Hexo教程：（三）使用Hexo写博客">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Hexo教程：（三）使用Hexo写博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -649,7 +665,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
                             </span>
                         <span class="publish-author">
                             
@@ -658,6 +674,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/tech/">
+                        <span class="chip bg-color">tech</span>
+                    </a>
+                    
                 </div>
                 
             </div>
