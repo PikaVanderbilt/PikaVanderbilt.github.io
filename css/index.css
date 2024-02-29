@@ -3233,6 +3233,20 @@ details p {
 .trm-exit-readmode:hover {
   color: var(--primary);
 }
+.trm-single-column .trm-banner .col-lg-8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.trm-single-column .trm-banner .trm-banner-text {
+  text-align: center;
+}
+.trm-single-column .trm-page-sidebar {
+  display: none;
+}
+.trm-single-column .trm-page-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
 /* code title */
 /* mac style title */
 /* max height */
@@ -3337,6 +3351,18 @@ figure.highlight:hover .code-tools.mac-style .code-lang {
 figure.highlight:hover .code-tools.mac-style .copy-button {
   display: inherit;
 }
+figure.highlight::after {
+  content: " ";
+  position: absolute;
+  border-radius: 50%;
+  background: #ff5f56;
+  width: 12px;
+  height: 12px;
+  top: 9px;
+  left: 12px;
+  -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+  box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
 figure.highlight .code-expand-btn {
   position: absolute;
   z-index: 10;
@@ -3365,6 +3391,7 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre,
 figure.highlight .code-expand-btn:not(.expand-done) ~ table {
   margin-bottom: 0;
   overflow: hidden;
+  height: 200px;
 }
 figure.highlight .code-expand-btn svg {
   margin: 0;
@@ -3447,6 +3474,9 @@ figure.highlight .code-expand-btn svg {
   overflow-x: auto;
   color: var(--highlight-foreground);
   background: var(--highlight-background);
+}
+.highlight .code pre {
+  white-space: pre-wrap;
 }
 .highlight pre {
   font-size: 14px !important;
@@ -3620,4 +3650,20 @@ pre .coffeescript .title {
 .trm-fixed-container.offset #trm-back-top {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+:root {
+  --primary: #5a5df0;
+  --primary-70: rgba(90, 93, 240, 0.7);
+  --primary-50: rgba(90, 93, 240, 0.5);
+  --primary-30: rgba(90, 93, 240, 0.3);
+  --primary-weak: #697be2;
+  --primary-weak-50: rgba(105, 123, 226, 0.5);
+}
+:root.dark {
+  --primary: #a4ce60;
+  --primary-70: rgba(164, 206, 96, 0.7);
+  --primary-50: rgba(164, 206, 96, 0.5);
+  --primary-30: rgba(164, 206, 96, 0.3);
+  --primary-weak: #82df7a;
+  --primary-weak-50: rgba(130, 223, 122, 0.5);
 }
